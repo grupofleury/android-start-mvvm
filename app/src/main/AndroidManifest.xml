@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.fleury.start">
 
+  <uses-permission android:name="android.permission.INTERNET"/>
+
   <application
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,9 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:name=".core.App"
+      android:networkSecurityConfig="@xml/network_security_config"
       android:theme="@style/AppTheme">
-    <activity android:name=".home.presentation.view.HomeActivity">
+    <activity android:name=".home.present.view.HomeActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 

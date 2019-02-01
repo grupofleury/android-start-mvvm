@@ -1,6 +1,6 @@
 package br.com.fleury.start.home.di
 
-import br.com.fleury.start.home.presentation.view.HomeActivity
+import br.com.fleury.start.home.present.view.HomeActivity
 import dagger.Subcomponent
 import dagger.android.AndroidInjector
 

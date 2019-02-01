@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerFragment
+import org.jetbrains.anko.support.v4.toast
 
 class BaseFragment : DaggerFragment(), BaseView {
 
@@ -21,6 +22,10 @@ class BaseFragment : DaggerFragment(), BaseView {
   }
 
   override fun hideLoader() {
+  }
+
+  override fun showToast(msg: String) {
+    toast(msg)
   }
 
 }
