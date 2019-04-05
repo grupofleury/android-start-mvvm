@@ -3,7 +3,9 @@ package br.com.fleury.start.core
 import android.app.Activity
 import android.app.Application
 import android.support.v4.app.Fragment
+import br.com.fleury.start.BuildConfig
 import br.com.fleury.start.core.di.DaggerAppComponent
+import com.facebook.stetho.Stetho
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -34,7 +36,10 @@ class App : Application(), HasActivityInjector, HasSupportFragmentInjector {
   }
 
   private fun initLogger() {
-    Timber.plant(Timber.DebugTree())
+      if(BuildConfig.DEBUG){
+          Timber.plant(Timber.DebugTree())
+          Stetho.initializeWithDefaults(this)
+      }
   }
 
   override fun supportFragmentInjector(): AndroidInjector<Fragment> = fragmentDIsptachingAndroidInjector

@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
 import br.com.fleury.start.R
-import br.com.fleury.start.core.domain.User
 import br.com.fleury.start.home.present.view.mapper.UserMapped
 import org.jetbrains.anko.find
 

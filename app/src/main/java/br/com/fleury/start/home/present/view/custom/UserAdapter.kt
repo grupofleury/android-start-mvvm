@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import br.com.fleury.start.R
-import br.com.fleury.start.core.domain.User
+import br.com.fleury.start.core.local.entity.User
 import br.com.fleury.start.home.present.view.mapper.UserMapper
 
 class UserAdapter : RecyclerView.Adapter<UserHolder>() {

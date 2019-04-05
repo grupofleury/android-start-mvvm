@@ -27,46 +27,53 @@ android {
 }
 
 dependencies {
-    implementation "android.arch.lifecycle:extensions:1.1.1"
-    implementation "android.arch.lifecycle:viewmodel:1.1.1"
-    implementation "android.arch.lifecycle:livedata:1.1.1"
-    implementation "android.arch.lifecycle:runtime:1.1.1"
-    kapt "android.arch.lifecycle:compiler:1.1.1"
-    implementation "android.arch.lifecycle:common-java8:1.1.1"
-    implementation "android.arch.lifecycle:reactivestreams:1.1.1"
-    testImplementation "android.arch.core:core-testing:1.1.1"
+    implementation "android.arch.lifecycle:extensions:$lifecycle"
+    implementation "android.arch.lifecycle:viewmodel:$lifecycle"
+    implementation "android.arch.lifecycle:livedata:$lifecycle"
+    implementation "android.arch.lifecycle:runtime:$lifecycle"
+    kapt "android.arch.lifecycle:compiler:$lifecycle"
+    implementation "android.arch.lifecycle:common-java8:$lifecycle"
+    implementation "android.arch.lifecycle:reactivestreams:$lifecycle"
+    testImplementation "android.arch.core:core-testing:$core_testing"
 
-    implementation "org.jetbrains.anko:anko:0.10.8"
+    implementation "org.jetbrains.anko:anko:$anko"
 
-    implementation "com.google.dagger:dagger:2.19"
-    implementation "com.google.dagger:dagger-android-support:2.19"
-    kapt "com.google.dagger:dagger-compiler:2.19"
-    kapt "com.google.dagger:dagger-android-processor:2.19"
+    implementation "com.google.dagger:dagger:$dagger2"
+    implementation "com.google.dagger:dagger-android-support:$dagger2"
+    kapt "com.google.dagger:dagger-compiler:$dagger2"
+    kapt "com.google.dagger:dagger-android-processor:$dagger2"
 
     implementation 'com.github.Pierry:SimpleToast:v1.7'
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:support-v13:28.0.0'
-    implementation 'com.android.support:recyclerview-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:exifinterface:28.0.0'
-    implementation 'com.android.support:animated-vector-drawable:28.0.0'
-    implementation 'com.android.support:support-media-compat:28.0.0'
-    implementation 'com.android.support:support-v4:28.0.0'
+    implementation "com.android.support:appcompat-v7:$support"
+    implementation "com.android.support:support-v13:$support"
+    implementation "com.android.support:recyclerview-v7:$support"
+    implementation "com.android.support:design:$support"
+    implementation "com.android.support:exifinterface:$support"
+    implementation "com.android.support:animated-vector-drawable:$support"
+    implementation "com.android.support:support-media-compat:$support"
+    implementation "com.android.support:support-v4:$support"
 
-    implementation "com.jakewharton.timber:timber:4.7.1"
+    implementation "com.jakewharton.timber:timber:$timber"
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
-    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
-    implementation 'com.squareup.retrofit2:converter-moshi:2.5.0'
-    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
-    implementation "com.squareup.retrofit2:retrofit:2.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofitCoroutines"
+    implementation "com.squareup.retrofit2:converter-moshi:$moshi"
+    implementation "com.squareup.retrofit2:converter-gson:$gson"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+
+    // Room
+    implementation "android.arch.persistence.room:runtime:$room"
+    kapt "android.arch.persistence.room:compiler:$room"
+
+    //DEBUG
+    implementation "com.facebook.stetho:stetho:$stetho"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "com.android.support.constraint:constraint-layout:$constraint"
+    testImplementation "junit:junit:$junit"
+    androidTestImplementation "com.android.support.test:runner:$runner"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso"
 }
