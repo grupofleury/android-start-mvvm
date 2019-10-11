@@ -10,7 +10,7 @@ MVVM start
 - Coroutines
 - Retrofit
 
-![](android-architecture.png)
+![](android-architecture_v2.png)
 
 ### SOLID
 
