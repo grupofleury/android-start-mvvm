@@ -10,6 +10,8 @@ MVVM start
 - Coroutines
 - Retrofit
 
+![](android-architecture.png)
+
 ### SOLID
 
 ### Model
@@ -21,5 +23,3 @@ MVVM start
 ### Offline first
 
 ### Firebase
-
-![](android-architecture.png)
