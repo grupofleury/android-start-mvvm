@@ -6,7 +6,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import br.com.fleury.start.R
-import br.com.fleury.start.core.domain.User
+import br.com.fleury.start.core.local.entity.User
 import br.com.fleury.start.core.presentation.BaseActivity
 import br.com.fleury.start.home.present.view.custom.UserAdapter
 import br.com.fleury.start.home.present.viewmodel.HomeViewModel

@@ -2,6 +2,7 @@ package br.com.fleury.start.core.di
 
 import br.com.fleury.start.core.api.Constants
 import br.com.fleury.start.core.api.IApi
+import br.com.fleury.start.core.local.dao.UserDAO
 import br.com.fleury.start.home.present.model.HomeModel
 import br.com.fleury.start.home.present.model.IHomeModel
 import com.google.gson.Gson
@@ -33,6 +34,5 @@ class NetworkModule {
     fun providesApi(retrofit: Retrofit): IApi = retrofit.create(IApi::class.java)
 
     @Provides
-    fun providesHomeModel(api: IApi): IHomeModel = HomeModel(api)
-
+    fun providesHomeModel(api: IApi, userDAO: UserDAO): IHomeModel = HomeModel(api, userDAO)
 }

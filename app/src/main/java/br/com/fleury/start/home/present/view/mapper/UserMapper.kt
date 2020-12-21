@@ -1,6 +1,6 @@
 package br.com.fleury.start.home.present.view.mapper
 
-import br.com.fleury.start.core.domain.User
+import br.com.fleury.start.core.local.entity.User
 
 object UserMapper {
 
